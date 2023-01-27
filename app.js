@@ -176,10 +176,68 @@ class Comment {
     upvote() {
         this.votesQt += 1;
     }
+
+    static mergeComment(first, second) {
+        return `${first} ${second}`;
+    }
 }
 
 const firstComment = new Comment("First Comment");
 
+//console.log(firstComment instanceof Comment);
+//console.log(firstComment instanceof Object);
+
+/*
+console.log(firstComment.votesQt);
+firstComment.upvote();
+console.log(firstComment.votesQt);
 console.log(firstComment);
-console.log(firstComment instanceof Comment);
-console.log(firstComment instanceof Object);
+console.log(firstComment.hasOwnProperty('text'));
+console.log(firstComment.hasOwnProperty('votesQt'));
+console.log(firstComment.hasOwnProperty('upvote'));
+console.log(Comment.mergeComment("First.", "is second"));
+*/
+
+/*
+console.log(firstComment);
+console.log(firstComment.__proto__ === Comment.prototype);
+*/
+
+
+/*
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+.then(response => {
+    console.log(response);
+    return response.json();
+})
+.then(json => console.log(json))
+.catch(error => console.error(error));
+*/
+
+
+const myPromise = new Promise(function (resolve, reject) {
+    console.log("Requesting data");
+    setTimeout(() => {
+        console.log("Preparing data");
+        const myObject = {
+            name: "John",
+            age: 23,
+            city: "New-York",
+        };
+        resolve(myObject);
+    }, 2000);
+});
+
+
+myPromise.then(data => {
+    return new Promise(function(resolve, reject) {
+        setTimeout(() =>  {
+            data.isSigned = true;
+            resolve(data);
+        }, 2000);
+    });
+
+}).then((clientData) => {
+    console.log("Data modified and returned", clientData);
+});
+
