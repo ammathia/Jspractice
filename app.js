@@ -230,14 +230,18 @@ const myPromise = new Promise(function (resolve, reject) {
 
 
 myPromise.then(data => {
-    return new Promise(function(resolve, reject) {
-        setTimeout(() =>  {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
             data.isSigned = true;
             resolve(data);
         }, 2000);
-    });
-
-}).then((clientData) => {
+    })
+})
+.then((clientData) => {
     console.log("Data modified and returned", clientData);
+    clientData.isPromise = "yes";
+    return clientData})
+.then((data) => {
+    console.log("Data modified and returned x2", data);
 });
 
