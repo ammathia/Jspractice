@@ -215,6 +215,9 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
 */
 
 
+
+/*
+
 const myPromise = new Promise(function (resolve, reject) {
     console.log("Requesting data");
     setTimeout(() => {
@@ -243,5 +246,20 @@ myPromise.then(data => {
     return clientData})
 .then((data) => {
     console.log("Data modified and returned x2", data);
-});
+})
+.catch(err => console.error("Error", err))
+.finally(() => console.log("Finally"))
 
+*/
+
+
+const sleep = ms => {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(), ms)
+    })
+};
+
+
+
+Promise.all([sleep(2000), sleep(5000)]).then(() => {console.log("All promises done")});
+Promise.race([sleep(2000), sleep(5000)]).then(() => {console.log("Race is done after 2 seconds")});
