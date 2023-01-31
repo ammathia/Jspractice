@@ -252,7 +252,7 @@ myPromise.then(data => {
 
 */
 
-
+/*
 const sleep = ms => {
     return new Promise(resolve => {
         setTimeout(() => resolve(), ms)
@@ -263,3 +263,58 @@ const sleep = ms => {
 
 Promise.all([sleep(2000), sleep(5000)]).then(() => {console.log("All promises done")});
 Promise.race([sleep(2000), sleep(5000)]).then(() => {console.log("Race is done after 2 seconds")});
+
+function asd() {
+    let x = 2;
+    return x;
+}
+b 
+console.log(asd());
+
+*/
+
+/*
+const asyncFn = async () => {
+    //throw new Error('Text of the Error')
+    return "Success";
+}
+
+asyncFn()
+.then(value => console.log(value))
+.catch(value => console.log(value))
+*/
+
+
+/*
+const function1 =  () => 
+  new Promise((resolve, reject) => 
+   setTimeout(() => resolve(), 2000));
+
+
+const asyncFn = async () => {
+    console.log('Timer starts');
+    let timer1 = Date.now();
+    await function1();
+    let timer2 = Date.now();
+    console.log("Timer ends", timer2 - timer1);
+}; 
+asyncFn()
+.then(() => console.log("Promise of asyncFn() fullfilled"));
+
+*/
+
+/*
+console.log("timer starts");
+let timer1 = performance.now();
+let timer2 = performance.now();
+let time = timer2 - timer1;
+console.log("Timer ends", time);
+
+
+setTimeout(function Date() {
+    let timer2 = performance.now();
+    let time = Math.round(timer2 - timer1);
+    console.log("Timer ends", time);
+}, 2000)
+*/
+
