@@ -318,4 +318,8 @@ setTimeout(function Date() {
 }, 2000)
 */
 
-j
+function bet() {
+    return new Promise(function(resolve, reject) {
+
+    })
+}
