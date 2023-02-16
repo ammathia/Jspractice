@@ -303,7 +303,7 @@ asyncFn()
 
 */
 
-/*
+
 console.log("timer starts");
 let timer1 = performance.now();
 let timer2 = performance.now();
@@ -316,7 +316,7 @@ setTimeout(function Date() {
     let time = Math.round(timer2 - timer1);
     console.log("Timer ends", time);
 }, 2000)
-*/
+
 
 function bet() {
     return new Promise(function(resolve, reject) {
