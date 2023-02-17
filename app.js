@@ -303,7 +303,7 @@ asyncFn()
 
 */
 
-
+/*
 console.log("timer starts");
 let timer1 = performance.now();
 let timer2 = performance.now();
@@ -323,3 +323,29 @@ function bet() {
 
     })
 }
+*/
+
+
+let buttonOne = document.getElementById('buttonId');
+
+buttonOne.onclick = () => {
+    if (buttonOne.style.backgroundColor == "blue") { 
+        buttonOne.style.backgroundColor = "yellow";
+    } else {
+        buttonOne.style.backgroundColor = "blue";
+    }
+}
+
+
+
+
+/*
+buttonOne.onclick = () => {
+    if (buttonOne.className === 'one') { 
+        buttonOne.className = 'two';
+    } else {
+        buttonOne.className = 'one';
+    }
+}
+
+*/
