@@ -325,7 +325,7 @@ function bet() {
 }
 */
 
-
+/*
 let buttonOne = document.getElementById('buttonId');
 
 buttonOne.onclick = () => {
@@ -337,7 +337,7 @@ buttonOne.onclick = () => {
 }
 
 
-
+*/
 
 /*
 buttonOne.onclick = () => {
