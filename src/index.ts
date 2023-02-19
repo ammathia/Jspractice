@@ -1,23 +1,18 @@
 class Rectangle {
-    private _width : number;
-    private _height : number;
+    name: string;
+    age : number;
 
-    constructor(width : number, height : number) {
-        this._height = height;
-        this._width = width;
+    constructor(name : string, age : number) {
+        this.name = name;
+        this.age = age;
 
     }
 
-
-    public get width() {
-        return this._width;
-    }
-
-    public set width(value) {
-        this._width = value;
-    }
 
 }
 
+let a1 : Rectangle = new Rectangle("Bob",42);
 
-let a1 : Rectangle = new Rectangle(2,4);
+console.log(a1);
+console.log(a1);
+console.log(a1);
