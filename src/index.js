@@ -7,5 +7,3 @@ var Rectangle = /** @class */ (function () {
 }());
 var a1 = new Rectangle("Bob", 42);
 console.log(a1);
-console.log(a1);
-console.log(a1);

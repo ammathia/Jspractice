@@ -14,5 +14,3 @@ class Rectangle {
 let a1 : Rectangle = new Rectangle("Bob",42);
 
 console.log(a1);
-console.log(a1);
-console.log(a1);
